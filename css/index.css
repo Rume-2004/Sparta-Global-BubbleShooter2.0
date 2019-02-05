@@ -16,14 +16,21 @@ img{
   border:2px solid black;
   width: 50px;
   height: 50px;
-
 }
-
-
 .green{
   display: inline-block;
   border:2px solid black;
   background-color: green;
   width: 50px;
   height: 50px;
+}
+.clear{
+  display: inline-block;
+  background-color: grey;
+  width: 50px;
+  height: 50px;
+}
+.arrow{
+  align-self: center;
+  images: ../images/arrow-image.png
 }

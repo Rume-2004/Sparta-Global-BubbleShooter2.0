@@ -43,11 +43,19 @@ var mapArray = [
   [2,1,2,1,1,1,2,2,1,1,1,2,1,2,1,1,2,2,1,2],
   [1.2,1,2,1.2,1,2,1.2,1,2,1.2,1,2,1.2,1,2],
   [2,1,2,1,1,1,2,2,1,1,1,2,1,2,1,1,2,2,1,2],
-  [1.2,1,2,1.2,1,2,1.2,1,2,1.2,1,2,1.2,1,2]
+  [1.2,1,2,1.2,1,2,1.2,1,2,1.2,1,2,1.2,1,2],
+  [1,1,1,2,2,2,2,1,1,2,1,2,1,2],
+  [3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],
+  [3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],
+  [3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],
+  [3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3]
+
 ];
 // blue = 1
 // green = 2
+// Clear = 3
 var green = document.getElementsByClassName('green')
+var clear = document.getElementsByClassName('clear')
 
 for (var y = 0; y < mapArray.length; y++) {
   for (var x = 0; x < mapArray[y].length; x++) {
@@ -58,6 +66,10 @@ for (var y = 0; y < mapArray.length; y++) {
     } else if (mapArray[y][x] == 2) {
         $("#board").append("<div class='green'></div>");
         console.log("green");
+    }else if(mapArray[y][x] == 3){
+      $("#board").append("<div class='clear'></div>");
+      console.log(clear);
     }
     }
   }
+  //to create bubbles
