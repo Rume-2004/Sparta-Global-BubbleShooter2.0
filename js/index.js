@@ -1,59 +1,22 @@
 console.log("Hi it's working");
 
-// var bubbles = new Array(2);
-// bubbles[0] = new Light_Blue_Ball;
-// bubbles[0].src = "images/Blue-Ball.png";
-// bubbles[1] = new Green_Ball;
-// bubbles[1].src = "images/green-ball.png";
-//
-// for (var i = 0; i < bubbles.length; i++) {
-//   var bubbles = Math.random(0, bubbles.length);
-//   bubbles[i]
-// }
-
-// [{, },{,}];"Green";"Lightblue";
-
-// function bubbles()
-// {
-//   var bubbles = document.getElementById("board");
-//
-//   for (var i = 0; i < bubbles.length; i++)
-//   {
-//     if(bubbles[0] == img)
-//     {
-//       if(0 == bubbles.length)
-//       {
-//         var bubbles = 0;
-//         document.getElementById("board").src = bubbles[0];
-//         break;
-//       }
-//       else
-//       var bubbles = 0 + 1
-//       document.getElementById("board").src = bubbles[0];
-//       break;
-//     }
-//
-//   }
-//
-// }
-// var balls = getRandomItem(bubbles);
-
 var mapArray = [
-  [1.2,1,2,1.2,1,2,1.2,1,2,1.2,1,2,1.2,1,2],
-  [2,1,2,1,1,1,2,2,1,1,1,2,1,2,1,1,2,2,1,2],
-  [1.2,1,2,1.2,1,2,1.2,1,2,1.2,1,2,1.2,1,2],
-  [2,1,2,1,1,1,2,2,1,1,1,2,1,2,1,1,2,2,1,2],
-  [1.2,1,2,1.2,1,2,1.2,1,2,1.2,1,2,1.2,1,2],
-  [1,1,1,2,2,2,2,1,1,2,1,2,1,2],
-  [3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],
-  [3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],
-  [3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],
-  [3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3]
-
+  [1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+  [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
+  [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
+  [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
+  [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
+  [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
+  [3,3,3,3,3,3,4,3,3,3,3,3,3,3]
 ];
 // blue = 1
 // green = 2
 // Clear = 3
+//arrow = 4
 var green = document.getElementsByClassName('green')
 var clear = document.getElementsByClassName('clear')
 
@@ -62,14 +25,32 @@ for (var y = 0; y < mapArray.length; y++) {
     console.log(y,x);
     if(mapArray[y][x] == 1){
       $("#board").append("<div class='blue'></div>");
-       console.log("blue");
+      console.log("blue");
     } else if (mapArray[y][x] == 2) {
-        $("#board").append("<div class='green'></div>");
-        console.log("green");
+      $("#board").append("<div class='green'></div>");
+      console.log("green");
     }else if(mapArray[y][x] == 3){
       $("#board").append("<div class='clear'></div>");
       console.log(clear);
-    }
+    }else if (mapArray[y][x] == 4) {
+      $("#board").append("<img src=images/arrow-image.png alt=arrow>");
     }
   }
-  //to create bubbles
+}
+//to create bubbles
+
+
+
+// var arrowArray =[
+//   [arrow1,arrow2,arrow3,arrow4, arrow5]]
+//
+// var vectorArrow = document.getElementById('arrow1')
+// var vectorArrow = document.;
+
+
+
+// this.getAngle = function(){
+//   var angle = Math.atan2(this.y, this.x);   //radians
+//   // you need to devide by PI, and MULTIPLY by 180:
+//   var degrees = 180*angle/Math.PI;  //degrees
+//   return (360+Math.round(degrees))%360; //round number, avoid decimal fragments

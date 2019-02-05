@@ -1,6 +1,6 @@
 #board{
 	width: 710px;
-	height: 600px;
+	height: 625px;
 	margin: 0px;
 	background-color: grey;
 	border-radius: 10px;
@@ -31,6 +31,7 @@ img{
   height: 50px;
 }
 .arrow{
-  align-self: center;
+  align: center;
+  display: block;
   images: ../images/arrow-image.png
 }
