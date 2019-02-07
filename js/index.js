@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+
+  // function myFunction() {
+  //   document.getElementById("instructions").innerHTML = "<h1>How to Play? When three or more bubbles of the same colour connect. The bubbles will pop. Use your mouse to connect bubbles of the same colour. Good Luck</h1>";
+  //   myFunction();
 // // console.log("Hi it's working");
 // var randomNum = Math.floor(Math.random()*2)+1;
 // console.log(randomNum);
@@ -8,11 +12,11 @@ var mapArray = [
   [1,1,1,4,1,1,1,1,1,1,1,1,1,1],
   [2,2,2,2,4,2,2,2,2,2,4,2,2,2],
   [1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-  [2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,5,2,2,2,2,2,2,2,2,2,2],
   [1,1,1,1,1,1,4,1,1,1,1,1,1,1],
+  [3,3,3,3,3,3,3,5,3,3,3,3,3,3],
   [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
-  [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
-  [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
+  [3,3,3,3,5,3,3,3,3,3,3,3,3,3],
   [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
   [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
   [3,3,3,3,3,3,3,3,3,3,3,3,3,3]
@@ -38,7 +42,11 @@ for (var y = 0; y < mapArray.length; y++) {
     }else if(mapArray[y][x] == 4){
        $("#board").append("<div class='Bomb'></div>");
        console.log('Bomb');
-  }
+    }
+    // else if(mapArray[y][x] == 5){
+    //    $("#board").append("<div class='beach'></div>");
+    //    console.log('beach');
+    //  }
 }
 }
 var score = 0;
@@ -49,7 +57,7 @@ setInterval(function(){
     time--;
       $(".timer").html("time: " + time)
     } else {
-      document.location = "../game_over.html"
+      document.location = "game_over.html"
     }},1000);
 
 $('.blue').click(function(){
@@ -73,7 +81,10 @@ $('.Bomb').click(function(){
   $(this).addClass('clear');
 });
 
-
+$("#demo").click(function() {
+    alert("How to Play? When three or more bubbles of the same colour connect. The bubbles will pop. Use your mouse to connect bubbles of the same colour. Good Luck")
+});
 
 });
+
  //end of the jquery which is at the top
