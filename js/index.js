@@ -11,10 +11,10 @@ $(document).ready(function(){
 var mapArray = [
   [1,1,1,4,1,1,1,1,1,1,1,1,1,1],
   [2,2,2,2,4,2,2,2,2,2,4,2,2,2],
-  [1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+  [1,1,1,1,5,1,1,1,1,1,1,1,1,1],
   [2,2,2,2,2,2,2,2,2,2,2,2,2,2],
   [1,1,1,1,1,1,4,1,1,1,1,1,1,1],
-  [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
+  [5,1,4,2,1,5,5,3,3,3,3,3,3,3],
   [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
   [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
   [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
@@ -25,6 +25,7 @@ var mapArray = [
 // green = 2
 // Clear = 3
 // bomb = 4
+// basketball = 5
 
 for (var y = 0; y < mapArray.length; y++) {
   for (var x = 0; x < mapArray[y].length; x++)
@@ -33,7 +34,7 @@ for (var y = 0; y < mapArray.length; y++) {
     if(mapArray[y][x] == 1){
       $("#board").append("<div class='blue'></div>");
       console.log("blue");
-    } else if (mapArray[y][x] == 2) {
+    } else if (mapArray[y][x] == 2){
       $("#board").append("<div class='green'></div>");
       console.log("green");
     }else if(mapArray[y][x] == 3){
@@ -42,11 +43,10 @@ for (var y = 0; y < mapArray.length; y++) {
     }else if(mapArray[y][x] == 4){
        $("#board").append("<div class='Bomb'></div>");
        console.log('Bomb');
+    }else if(mapArray[y][x] == 5){
+       $("#board").append("<div class='basketball'></div>");
+       console.log('basketball_ball');
     }
-    // else if(mapArray[y][x] == 5){
-    //    $("#board").append("<div class='beach'></div>");
-    //    console.log('beach');
-    //  }
 }
 }
 var score = 0;
@@ -62,21 +62,28 @@ setInterval(function(){
 
 $('.blue').click(function(){
     score = score + 10;
-    $(".scoreboard").html("score"+ score);
+    $(".scoreboard").html("score"+ " " + score);
 $(this).removeClass('blue');
 $(this).addClass('clear');
 });
 
 $('.green').click(function(){
   score = score + 20;
-    $(".scoreboard").html("score"+ score)
+    $(".scoreboard").html("score"+ " " +  score)
   $(this).removeClass('green');
+  $(this).addClass('clear');
+});
+
+$('.basketball').click(function(){
+  score = score + 20;
+    $(".scoreboard").html("score"+ " " +  score)
+  $(this).removeClass('basketball');
   $(this).addClass('clear');
 });
 
 $('.Bomb').click(function(){
   score = score - 20;
-    $(".scoreboard").html("score"+ score)
+    $(".scoreboard").html("score"+ " " + score)
   $(this).removeClass('green');
   $(this).addClass('clear');
 });
