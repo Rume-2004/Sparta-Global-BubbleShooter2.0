@@ -67,6 +67,7 @@ $('.blue').click(function(){
     $(".scoreboard").html("score"+ " " + score);
 $(this).removeClass('blue');
 $(this).addClass('clear');
+$('.clear').off('click');
 // if('clear'){
 //   score = score - 10;
 // }
@@ -77,6 +78,7 @@ $('.green').click(function(){
     $(".scoreboard").html("score"+ " " +  score)
   $(this).removeClass('green');
   $(this).addClass('clear');
+  $('.clear').off('click');
   // if('clear'){
   //   score = score - 10;
   // }
@@ -87,6 +89,7 @@ $('.basketball').click(function(){
     $(".scoreboard").html("score"+ " " +  score)
   $(this).removeClass('basketball');
   $(this).addClass('clear');
+  $('.clear').off('click');
   // if('clear'){
   //   score = score - 10;
   // }
