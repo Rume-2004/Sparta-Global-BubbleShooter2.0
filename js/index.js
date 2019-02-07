@@ -12,11 +12,11 @@ var mapArray = [
   [1,1,1,4,1,1,1,1,1,1,1,1,1,1],
   [2,2,2,2,4,2,2,2,2,2,4,2,2,2],
   [1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-  [2,2,2,5,2,2,2,2,2,2,2,2,2,2],
+  [2,2,2,2,2,2,2,2,2,2,2,2,2,2],
   [1,1,1,1,1,1,4,1,1,1,1,1,1,1],
-  [3,3,3,3,3,3,3,5,3,3,3,3,3,3],
   [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
-  [3,3,3,3,5,3,3,3,3,3,3,3,3,3],
+  [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
+  [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
   [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
   [3,3,3,3,3,3,3,3,3,3,3,3,3,3],
   [3,3,3,3,3,3,3,3,3,3,3,3,3,3]
@@ -82,7 +82,11 @@ $('.Bomb').click(function(){
 });
 
 $("#demo").click(function() {
-    alert("How to Play? When three or more bubbles of the same colour connect. The bubbles will pop. Use your mouse to connect bubbles of the same colour. Good Luck")
+    alert("How to Play? Click on the bubbles to make it pop. Dont pop the bombs or you lose points. Get the highest score in 20 seconds. Good Luck!")
+});
+
+$("#restart").click(function() {
+    this.innerHTML = '<a href="index.html">Restart</a>'
 });
 
 });
