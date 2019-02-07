@@ -97,7 +97,7 @@ $("#restart").click(function() {
 });
 
 $("#play_again").click(function() {
-    this.innerHTML = '<a href="game_over.html">Play_again</a>'
+    this.innerHTML = '<a href="index.html">Play_again</a>'
 });
 
 });
