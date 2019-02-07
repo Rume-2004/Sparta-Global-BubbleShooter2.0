@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  var score = 0;
+  var time = 20;
 
   // function myFunction() {
   //   document.getElementById("instructions").innerHTML = "<h1>How to Play? When three or more bubbles of the same colour connect. The bubbles will pop. Use your mouse to connect bubbles of the same colour. Good Luck</h1>";
@@ -49,15 +51,15 @@ for (var y = 0; y < mapArray.length; y++) {
     }
 }
 }
-var score = 0;
-var time = 20;
+
 
 setInterval(function(){
   if (time != 0 ) {
     time--;
       $(".timer").html("time: " + time)
     } else {
-      document.location = "game_over.html"
+      $(".Instructions").html('<h2 id = "endscore">Your score is <div class="scoregame"></div></h2><button><a href="index.html">Play Again</a></button>');
+      $(".scoregame").html(score);
     }},1000);
 
 $('.blue').click(function(){
@@ -65,10 +67,9 @@ $('.blue').click(function(){
     $(".scoreboard").html("score"+ " " + score);
 $(this).removeClass('blue');
 $(this).addClass('clear');
-console.log('blue')
-if('clear'){
-  score = score - 10;
-}
+// if('clear'){
+//   score = score - 10;
+// }
 });
 
 $('.green').click(function(){
@@ -76,10 +77,9 @@ $('.green').click(function(){
     $(".scoreboard").html("score"+ " " +  score)
   $(this).removeClass('green');
   $(this).addClass('clear');
-  console.log('green');
-  if('clear'){
-    score = score - 10;
-  }
+  // if('clear'){
+  //   score = score - 10;
+  // }
 });
 
 $('.basketball').click(function(){
@@ -87,10 +87,9 @@ $('.basketball').click(function(){
     $(".scoreboard").html("score"+ " " +  score)
   $(this).removeClass('basketball');
   $(this).addClass('clear');
-  console.log('basketball');
-  if('clear'){
-    score = score - 10;
-  }
+  // if('clear'){
+  //   score = score - 10;
+  // }
 });
 
 $('.Bomb').click(function(){
@@ -108,9 +107,11 @@ $("#restart").click(function() {
     this.innerHTML = '<a href="index.html">Restart</a>'
 });
 
-$("#play_again").click(function() {
-    this.innerHTML = '<a href="index.html">Play_again</a>'
-});
+// $("#play_again").click(function() {
+//     this.innerHTML = '<a href="index.html">Play_again</a>'
+// });
+
+// localStorage.setItem("key", score);
 
 });
 
