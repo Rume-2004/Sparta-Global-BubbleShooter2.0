@@ -12,15 +12,10 @@ img{
 }
 .blue{
   display: inline-block;
-  /* background-color: blue; */
   background-image: url(../images/Blue-Ball.png);
   width: 50px;
   height: 50px;
 }
-
-.empty{
-  background-image: rgba(0, 0, 0, 0);
-} 
 
 .green{
   display: inline-block;
@@ -35,6 +30,9 @@ img{
   width: 50px;
   height: 50px;
 }
-.instructions{
-
+.Bomb{
+  display: inline-block;
+  background-image: url(../images/Bomb.gif);
+  width: 50px;
+  height: 50px;
 }
