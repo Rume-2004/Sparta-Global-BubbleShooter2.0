@@ -47,3 +47,8 @@ img{
   align-content: center;
   display: block;
 }
+
+.endscreen{
+	background-color: grey;
+	text-align: center;
+}

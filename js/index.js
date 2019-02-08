@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   var score = 0;
-  var time = 20;
+  var time = 5;
 
   // function myFunction() {
   //   document.getElementById("instructions").innerHTML = "<h1>How to Play? When three or more bubbles of the same colour connect. The bubbles will pop. Use your mouse to connect bubbles of the same colour. Good Luck</h1>";
@@ -58,7 +58,7 @@ setInterval(function(){
     time--;
       $(".timer").html("time: " + time)
     } else {
-      $(".Instructions").html('<h2 id = "endscore">Your score is <div class="scoregame"></div></h2><button><a href="index.html">Play Again</a></button>');
+      $(".container").html('<div class ="row"><div class = "col-md-12 endscreen"><h1 id = "endscore">Game Over!</h1> <h2>Your score is <span class="scoregame"></span></h2><button><a href="index.html">Play Again</a></button></div></div>');
       $(".scoregame").html(score);
     }},1000);
 

@@ -1,4 +1,7 @@
 # Sparta-Global-BubbleShooter2.0
+# The Purpose
+
+This game was made with HTML, CSS and JS.
 
 The game is called Bubble Popper.
 
