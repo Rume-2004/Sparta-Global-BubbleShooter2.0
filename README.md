@@ -6,7 +6,7 @@ This game shows the ability of the technical skills to making a working game.
 This game is a work in progress
 
 # Game
-The game is called Bubble Popper.
+## The game is called Bubble Popper.
 
 The aim of bubble popper is for the gamer to pop all the bubbles in the game board.
 Most of the bubbles when pops will score the gamer points respectively.
@@ -18,6 +18,6 @@ The game is controlled with the mouse clicks.
 It is a simple application that displays the game board and game over page.
 
 # Implementation
-Bootstrap 3.3
-Well-structured CSS
-Semantic HTML5
+- Bootstrap 3.3
+- Well-structured CSS
+- Semantic HTML5
