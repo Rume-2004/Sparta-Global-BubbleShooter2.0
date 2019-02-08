@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   var score = 0;
-  var time = 5;
+  var time = 15;
 
   // function myFunction() {
   //   document.getElementById("instructions").innerHTML = "<h1>How to Play? When three or more bubbles of the same colour connect. The bubbles will pop. Use your mouse to connect bubbles of the same colour. Good Luck</h1>";
