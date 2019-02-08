@@ -103,7 +103,7 @@ $('.Bomb').click(function(){
 });
 
 $("#demo").click(function() {
-    alert("How to Play? Click on the bubbles to make it pop. Dont pop the bombs or you lose points. Get the highest score in 20 seconds. Good Luck!")
+    alert("How to Play? Click on the bubbles to make it pop. Dont pop the bombs or you lose points. Get the highest score in 15 seconds. Good Luck!")
 });
 
 $("#restart").click(function() {
